@@ -1,0 +1,9 @@
+{
+	"name": "iot-lab-3",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Cisco Packet Tracer IoT lab, variant 3",
+	"scripts": {
+		"test": "node tests/alarm.test.cjs ."
+	}
+}

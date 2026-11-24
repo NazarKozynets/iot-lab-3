@@ -1,0 +1,59 @@
+{
+	"variant": 3,
+	"student": "Козинець Назарій Ігорович",
+	"group": "КС-23",
+	"network": "10.3.0.0/24",
+	"gateway": "10.3.0.1",
+	"iotServer": "10.3.0.2",
+	"dnsServer": "10.3.0.2",
+	"dnsRecord": {
+		"name": "iot.home",
+		"type": "A",
+		"address": "10.3.0.2"
+	},
+	"dhcp": {
+		"server": "10.3.0.1",
+		"start": "10.3.0.100",
+		"maximumUsers": 50,
+		"subnetMask": "255.255.255.0",
+		"defaultGateway": "10.3.0.1",
+		"dnsServer": "10.3.0.2"
+	},
+	"wlan": {
+		"ssid": "KNI_Lab3",
+		"security": "WPA2-PSK",
+		"testPassphrase": "IoTLab3-2026"
+	},
+	"devices": [
+		{
+			"name": "Motion Detector",
+			"addressing": "DHCP"
+		},
+		{
+			"name": "Siren",
+			"addressing": "DHCP"
+		},
+		{
+			"name": "Garage Door",
+			"addressing": "DHCP"
+		},
+		{
+			"name": "Tablet",
+			"addressing": "DHCP"
+		}
+	],
+	"alarmTimeoutSeconds": 10,
+	"conditions": [
+		{
+			"when": "Motion Detector detects motion",
+			"set": "Siren.On",
+			"value": true
+		},
+		{
+			"when": "Motion Detector no longer detects motion",
+			"set": "Siren.On",
+			"value": false
+		}
+	],
+	"serverInterface": "Wireless0"
+}

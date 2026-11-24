@@ -1,0 +1,4 @@
+Tablet PC0=10.3.0.100
+Motion Detector=10.3.0.103
+Siren=10.3.0.101
+Garage Door=10.3.0.105
